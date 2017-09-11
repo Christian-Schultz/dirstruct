@@ -8,7 +8,7 @@ separated by newlines. Execute the script with -h to see the different options. 
 
 def parse_args():
     description = 'Create a directory structure from file. Directories in the definition file should be separated by ' \
-                  'newlines and should follow the UNIX path convention. ' \
+                  'newlines and should follow the UNIX path convention. \n' \
                   'The root directory of the directory structure can be controlled by the --root parameter.'
 
     epilog = "Example:" \
