@@ -46,11 +46,12 @@ def main(args):
     dirfile = os.path.realpath(args.dirfile)
 
     verbose = args.verbose or args.debug
+    
+    root = os.path.expanduser(args.root)
+    if not os.path.exists(root):
+        os.mkdir(root)
 
-    if not os.path.exists(args.root):
-        os.mkdir(args.root)
-
-    os.chdir(args.root)
+    os.chdir(root)
 
     with open(dirfile, 'r') as f:
         for line in f:
